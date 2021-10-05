@@ -15,27 +15,30 @@ Steps:
 
 */
 
-function updateCounter () {
-    let counterDisplayElem = document.getElementById("countDisplay");
-    let counterIncreaseElem = document.getElementById("increase");
-    let counterDecreaseElem = document.getElementById("decrease");
 
-    let count = 0;
-    
-    counterDisplayElem.innerHTML = count;
-}
+let counterDisplayElem = document.getElementById("countDisplay");
+let counterIncreaseElem = document.getElementById("increase");
+let counterDecreaseElem = document.getElementById("decrease");
+
+let count = 0;
+
+updateCounter();
 
 
 
 counterIncreaseElem.addEventListener("click", function() {
     count++;
     updateCounter();
-});
+})
 
 counterDecreaseElem.addEventListener("click", function() {
     count--;
     updateCounter();
-});
+})
+
+function updateCounter() {
+    counterDisplayElem.innerHTML = count;
+}
 
 
 
