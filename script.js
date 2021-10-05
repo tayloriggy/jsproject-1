@@ -11,14 +11,32 @@ Requirements:
 Steps:
 1. This will be webpage, thus need to create an index.html, style.css, script.js.
 2. Will need to utilize buttons in html.
-3. For JS, utilize an array to increment count.
+3. For JS, utilize the DOM? 
 
 */
 
-function counter1 () {
+function updateCounter () {
+    let counterDisplayElem = document.getElementById("countDisplay");
+    let counterIncreaseElem = document.getElementById("increase");
+    let counterDecreaseElem = document.getElementById("decrease");
 
-}
-
-function counter2 () {
+    let count = 0;
     
+    counterDisplayElem.innerHTML = count;
 }
+
+
+
+counterIncreaseElem.addEventListener("click", function() {
+    count++;
+    updateCounter();
+});
+
+counterDecreaseElem.addEventListener("click", function() {
+    count--;
+    updateCounter();
+});
+
+
+
+
