@@ -19,25 +19,26 @@ Steps:
 let counterDisplayElem = document.getElementById("countDisplay");
 let counterIncreaseElem = document.getElementById("increase");
 let counterDecreaseElem = document.getElementById("decrease");
+// declaring variables and applying the DOM get elem by ID
 
 let count = 0;
+//declaring variable "count" to use a reference to increment and decrement, initializes count to 0
 
-updateCounter();
+updateCounter(); //calling function so that the integer "0" is displayed for initial count (let count = 0;)
 
 
-
-counterIncreaseElem.addEventListener("click", function() {
-    count++;
-    updateCounter();
+counterIncreaseElem.addEventListener("click", function() { //using addEventListener to have action once button is clicked
+    count++; //increment count by 1
+    updateCounter(); //call function to update the count displayed on page
 })
 
 counterDecreaseElem.addEventListener("click", function() {
-    count--;
+    count--; //decrement count by 1
     updateCounter();
 })
 
 function updateCounter() {
-    counterDisplayElem.innerHTML = count;
+    counterDisplayElem.innerHTML = count; //displaying the updated count on h1 element, sets h1 element equal to whatever count is currently at
 }
 
 
